@@ -9,7 +9,7 @@ Let's create a model *Email* with the following fields:
  * to:string
  * subject:string
  * body:text
- * sent:boolean
+ * verified:boolean
 
 
  The boolean *sent* should be false by default and switched to true when the email is sent.
