@@ -5,7 +5,7 @@ module EmailValidator
   	def self.is_valid(email)
       response = HTTParty.get "https://pozzad-email-validator.p.mashape.com/emailvalidator/validateEmail/#{email}",
   		headers:{
-  		  "X-Mashape-Key" => "Rl6gf5Oh1emshO5dmeoszGCdy4vPp1D7miJjsnU6go2Lj0WjNA",
+  		  "X-Mashape-Key" => ENV['VALIDATOR_KEY'],
   		  "Accept" => "application/json"
   		}
   	  JSON.parse(response.body)['isValid']
